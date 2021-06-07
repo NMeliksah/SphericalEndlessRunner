@@ -26,8 +26,6 @@ public class RadialDistanceController : MonoBehaviour
         float axis = Input.GetAxis("Vertical");
         if (axis != 0)
         {
-            Debug.Log("Input axis is: " + axis);
-            // Change radial distance here
             if (_radialLayoutGroup.Distance < _minDistance)
             {
                 _radialLayoutGroup.Distance = _minDistance;
