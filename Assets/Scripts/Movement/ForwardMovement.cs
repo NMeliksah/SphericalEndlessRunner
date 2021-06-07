@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class ForwardMovement : MonoBehaviour
 {
-    [SerializeField] private float _movementSpeed;
-
     public bool MovementEnabled;
+
+    [SerializeField] private float _movementSpeed;
 
     private void Update()
     {

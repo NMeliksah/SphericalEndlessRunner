@@ -5,5 +5,7 @@ public enum EImpactableType
     Sphere2,
     Sphere3,
     Obstacle,
-    Powerup
+    Tile,
+    Powerup,
+    ObjectKiller
 }
