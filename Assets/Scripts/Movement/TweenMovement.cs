@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class TweenMovement : MonoBehaviour
+public class TweenMovement : MonoBehaviour, IMovement
 {
-    public bool MovementEnabled;
-    public bool RotatingRight;
-    public bool RotatingLeft;
+    private bool _movementEnabled;
+    private bool _rotatingRight;
+    private bool _rotatingLeft;
     
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _rotateDuration;
@@ -17,28 +17,47 @@ public class TweenMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!MovementEnabled) return;
         ConstantMovement();
+    }
+
+    public void TurnRight()
+    {
+        _rotatingRight = true;
+    }
+
+    public void TurnLeft()
+    {
+        _rotatingLeft = true;
+    }
+
+    public void SetMoveSpeed(float moveSpeed)
+    {
+        _movementSpeed = moveSpeed;
+    }
+
+    public void SetMovementState(bool state)
+    {
+        _movementEnabled = state;
+    }
+
+    public void ConstantMovement()
+    {
+        if (!_movementEnabled) return;
         
-        if (RotatingRight)
+        transform.DOMove(_movementTargetTransform.position, 1/_movementSpeed);
+
+        if (_rotatingRight)
         {
             transform.DOLocalRotate(transform.rotation.eulerAngles + new Vector3(0, 90.0f, 0),
                 _rotateDuration, RotateMode.Fast);
-            RotatingRight = false;
+            _rotatingRight = false;
         }
         
-        if (RotatingLeft)
+        if (_rotatingLeft)
         {
             transform.DOLocalRotate(transform.rotation.eulerAngles + new Vector3(0, -90.0f, 0),
                 _rotateDuration, RotateMode.Fast);
-            RotatingLeft = false;
+            _rotatingLeft = false;
         }
     }
-    
-    private void ConstantMovement()
-     {
-         //transform.Translate(transform.forward * );
-         transform.DOMove(_movementTargetTransform.position, 1/_movementSpeed);
-         
-     }
 }
