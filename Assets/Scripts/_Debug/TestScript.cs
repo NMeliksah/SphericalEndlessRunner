@@ -5,8 +5,5 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    private void Start()
-    {
-        TestSingleton.Instance.TestFunction();
-    }
+
 }

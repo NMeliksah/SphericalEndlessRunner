@@ -1,19 +1,16 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpactableObstacle : Impactable
+public class ImpactObjectTile : ImpactObject
 {
-    private GameObject _parent => this.gameObject.transform.parent.gameObject;
-    
-    protected override void Impact(Impactable other)
+    public override void Impact(ImpactObject other)
     {
         Debug.Log("The gameobject " +gameObject+ " successfully impacted with " + other.ImpactableType );
-        
+
         if (other.ImpactableType == EImpactableType.ObjectKiller)
         {
-            ObjectPooler.Instance.Despawn(_parent);
+            ObjectPooler.Instance.Despawn(this.gameObject);
         }
     }
 }

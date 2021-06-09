@@ -103,13 +103,6 @@ public class ObjectPooler : Singleton<ObjectPooler>
         DespawningOperation(obj);
     }
 
-    public IEnumerator DelayedDespawn(GameObject obj)
-    {
-        yield return _waitForSeconds;
-
-        DespawningOperation(obj);
-    }
-
     private bool IsObjectImplementedRequirements(GameObject gameObject)
     {
         return gameObject.GetComponent<IPooledObject>() != null;

@@ -7,7 +7,7 @@ using UnityEngine;
 public class LaserVisuals : MonoBehaviour
 {
     [SerializeField] private float _laserDistance = 5000.0f;
-    private bool _laserEnabled = true;
+    [SerializeField] private bool _laserEnabled = true;
     private LineRenderer _lineRenderer => GetComponent<LineRenderer>();
 
     public void SetLaserState(bool state)

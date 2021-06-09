@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class LaserPowerup : Powerup
 {
-    protected override void EnablePowerup(float duration)
+    protected override void OnPowerupEnable()
     {
         foreach (var laser in GameMaster.Instance.LaserVisualsArray)
         {
-            throw new NotImplementedException();
+            laser.SetLaserState(true);
+        }
+    }
+
+    protected override void OnPowerupDisable()
+    {
+        foreach (var laser in GameMaster.Instance.LaserVisualsArray)
+        {
+            laser.SetLaserState(false);
         }
     }
 }

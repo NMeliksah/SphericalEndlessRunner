@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImpactablePlayer : Impactable
+public class ImpactObjectObjectKiller : ImpactObject
 {
-    protected override void Impact(Impactable other)
+    public override void Impact(ImpactObject other)
     {
         Debug.Log("The gameobject " +gameObject+ " successfully impacted with " + other.ImpactableType );
     }

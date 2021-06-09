@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026841894460751179}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.00000017484555, y: 4, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 5691261974593092081}
@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 5691261974593092081}
   - component: {fileID: 4271271441948618091}
   - component: {fileID: 4846870915530833766}
+  - component: {fileID: 9133059851393468027}
   m_Layer: 0
   m_Name: Root1Powerup1
   m_TagString: Untagged
@@ -202,4 +203,17 @@ MonoBehaviour:
   Distance: 4
   MinAngle: 0
   MaxAngle: 360
-  StartAngle: 90
+  StartAngle: 0
+--- !u!114 &9133059851393468027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279272036650538280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72dd93164f006446a1623815a6d3c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerupDuration: 5
