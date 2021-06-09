@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class RadialDistanceController : MonoBehaviour
 {
-    [SerializeField] private float _minDistance;
-    [SerializeField] private float _maxDistance; 
-    [SerializeField] private  RadialLayoutGroup _radialLayoutGroup;
+    [SerializeField] private float _minDistance = 0.25f;
+    [SerializeField] private float _maxDistance = 4.0f; 
+    [SerializeField] private  RadialLayoutGroup _radialLayoutGroup = null;
     
     public float DistanceChangeSpeed;
     public bool DistanceChangeEnabled;

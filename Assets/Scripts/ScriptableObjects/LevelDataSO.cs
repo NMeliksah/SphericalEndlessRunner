@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class LevelData : MonoBehaviour
+[CreateAssetMenu(fileName = "LevelData", menuName = "New LevelData")]
+public class LevelDataSO : ScriptableObject
 {
-    public GameObject FirstTile;
-    public GameObject LastTile;
+    public string LevelName;
+    public float MoveSpeed;
     public List<GameObject> Tiles;
     public List<GameObject> Obstacles;
     public List<GameObject> Powerups;
-
-    public RandomSpawner Spawner;
-    
-    
 }

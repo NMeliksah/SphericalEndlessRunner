@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class RadialRotationController : MonoBehaviour
 {
-    [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _rotationSpeed = 0.6f;
 
-    public bool RotationEnabled;
+    public bool RotationEnabled = true;
 
     private void Update()
     {

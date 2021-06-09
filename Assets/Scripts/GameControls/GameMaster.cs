@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class GameMaster : Singleton<GameMaster>
 {
-    public IMovement PlayerMovement => GameObject.FindWithTag("Player").GetComponent<IMovement>();
+    private GameObject _player => GameObject.FindWithTag("Player");
+    public PlayerCharacter PlayerCharacter => _player.GetComponent<PlayerCharacter>();
+    public IMovement PlayerMovement => _player.GetComponent<IMovement>();
+    public LaserVisuals[] LaserVisualsArray => _player.GetComponentsInChildren<LaserVisuals>();
+    
+    // Set LevelData as LevelData => PlayerPrefs.LastLevel or something like that. Get it automatically.
+    public LevelDataSO LevelData;
 
     private void Start()
     {

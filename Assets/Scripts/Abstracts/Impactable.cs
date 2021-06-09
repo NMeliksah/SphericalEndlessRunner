@@ -9,6 +9,7 @@ public abstract class Impactable : MonoBehaviour
     public EImpactableType ImpactableType;
     public List<EImpactableType> ImpactableTypes;
 
+    public Action<EImpactableType, EImpactableType> OnImpact;
     protected abstract void Impact(Impactable other);
 
     private void OnCollisionEnter(Collision other)

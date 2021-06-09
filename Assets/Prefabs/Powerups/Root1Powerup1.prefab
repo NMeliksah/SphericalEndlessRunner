@@ -152,7 +152,6 @@ GameObject:
   - component: {fileID: 5691261974593092081}
   - component: {fileID: 4271271441948618091}
   - component: {fileID: 4846870915530833766}
-  - component: {fileID: 9011014147351692982}
   m_Layer: 0
   m_Name: Root1Powerup1
   m_TagString: Untagged
@@ -204,17 +203,3 @@ MonoBehaviour:
   MinAngle: 0
   MaxAngle: 360
   StartAngle: 90
---- !u!114 &9011014147351692982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8279272036650538280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b0258eaca1dda43bf4ab8e65eb057e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetRandomPosition: 0
-  InitialPositionAngle: 0

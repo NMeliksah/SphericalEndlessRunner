@@ -10,10 +10,10 @@ public class TweenMovement : MonoBehaviour, IMovement
     private bool _rotatingRight;
     private bool _rotatingLeft;
     
-    [SerializeField] private float _movementSpeed;
-    [SerializeField] private float _rotateDuration;
+    [SerializeField] private float _movementSpeed = 5;
+    [SerializeField] private float _rotateDuration = 1;
     
-    [SerializeField] private Transform _movementTargetTransform;
+    [SerializeField] private Transform _movementTargetTransform = null;
 
     private void Update()
     {
