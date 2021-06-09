@@ -25,9 +25,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _VortexFade: 1
-    - _WarpDepth: 0.6
-    - _WarpSize: 0.035
-    - _WarpSpeed: 5
+    - _WarpDepth: 0.5
+    - _WarpSize: 0
+    - _WarpSpeed: 2.5
     - _WarpTileX: 10
     - _WarpTileY: 10
     m_Colors:
