@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e5af588a8a21643808c7c70dadfec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectImpactType: 4
-  ImpactAllowedTypes: 01000000020000000300000007000000
+  ObjectImpactType: 9
+  ImpactAllowedTypes: 0600000007000000080000000c000000
   OverrideStartPosition: 1
   SetRandomPosition: 0
   InitialPositionAngle: 0

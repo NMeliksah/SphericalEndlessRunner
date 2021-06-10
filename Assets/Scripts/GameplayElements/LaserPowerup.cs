@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class LaserPowerup : Powerup
 {
+    private LaserVisuals[] LaserVisualsArray => GetComponentsInChildren<LaserVisuals>();
     protected override void OnPowerupEnable()
     {
-        foreach (var laser in GameMaster.Instance.LaserVisualsArray)
+        foreach (var laser in LaserVisualsArray)
         {
             laser.SetLaserState(true);
         }
@@ -15,7 +16,7 @@ public class LaserPowerup : Powerup
 
     protected override void OnPowerupDisable()
     {
-        foreach (var laser in GameMaster.Instance.LaserVisualsArray)
+        foreach (var laser in LaserVisualsArray)
         {
             laser.SetLaserState(false);
         }
