@@ -1,18 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSphere : MonoBehaviour
+public class PlayerSphere : Impactable
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Impact(Impactable impactedObject)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("PlayerSphere impacted: " + impactedObject.gameObject);
     }
 }

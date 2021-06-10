@@ -1,11 +1,11 @@
 public enum EImpactableType
 {
-    None,
-    Sphere1,
-    Sphere2,
-    Sphere3,
-    Obstacle,
-    Tile,
-    Powerup,
-    ObjectKiller
+    None = -1,
+    Sphere1 = 6,
+    Sphere2 = 7,
+    Sphere3 = 8,
+    Obstacle = 9,
+    Tile = 10,
+    Powerup = 11,
+    ObjectKiller = 12
 }

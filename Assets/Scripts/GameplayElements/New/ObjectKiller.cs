@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectKiller : MonoBehaviour
+public class ObjectKiller : Impactable
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Impact(Impactable impactedObject)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ObjectPooler.Instance.Despawn(impactedObject.gameObject);
+        Debug.Log("Object Killer despawned: " + impactedObject.gameObject);
     }
 }

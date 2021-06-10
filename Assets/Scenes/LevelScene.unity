@@ -230,8 +230,8 @@ GameObject:
   - component: {fileID: 21165459}
   - component: {fileID: 21165458}
   - component: {fileID: 21165461}
-  - component: {fileID: 21165462}
   - component: {fileID: 21165464}
+  - component: {fileID: 21165462}
   m_Layer: 0
   m_Name: Sphere1
   m_TagString: Untagged
@@ -432,11 +432,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 21165456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3599765d38b494281a1b91c8bc8dcb, type: 3}
+  m_Script: {fileID: 11500000, guid: c9853b15ad168e144a552d941977ebb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactableType: 1
-  ImpactableTypes: 0400000006000000
+  ObjectImpactType: 1
+  ImpactAllowedTypes: 0400000006000000
 --- !u!54 &21165464
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -516,8 +516,8 @@ GameObject:
   - component: {fileID: 298560894}
   - component: {fileID: 298560893}
   - component: {fileID: 298560896}
-  - component: {fileID: 298560897}
   - component: {fileID: 298560899}
+  - component: {fileID: 298560897}
   m_Layer: 0
   m_Name: Sphere3
   m_TagString: Untagged
@@ -718,11 +718,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 298560891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3599765d38b494281a1b91c8bc8dcb, type: 3}
+  m_Script: {fileID: 11500000, guid: c9853b15ad168e144a552d941977ebb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactableType: 3
-  ImpactableTypes: 0400000006000000
+  ObjectImpactType: 3
+  ImpactAllowedTypes: 0400000006000000
 --- !u!54 &298560899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserDistance: 5000
-  _laserEnabled: 1
+  _laserEnabled: 0
 --- !u!120 &509606595
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1182,17 +1182,6 @@ MonoBehaviour:
   _radialLayoutGroup: {fileID: 760640407}
   DistanceChangeSpeed: 8
   DistanceChangeEnabled: 1
---- !u!114 &770928558 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2631748782413047953, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}
-  m_PrefabInstance: {fileID: 4084061936582057848}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c56cc407bb9e34a8e1303fc42b2566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &893024151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,11 +1253,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 893024151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f8b4cfdf9253a4286eae014017c831, type: 3}
+  m_Script: {fileID: 11500000, guid: 264fe7d51c69cfa498c964d52482a963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactableType: 7
-  ImpactableTypes: 050000000600000004000000
+  ObjectImpactType: 7
+  ImpactAllowedTypes: 040000000500000006000000
 --- !u!1 &1057817338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserDistance: 5000
-  _laserEnabled: 1
+  _laserEnabled: 0
 --- !u!120 &1095846247
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1916,8 +1905,8 @@ GameObject:
   - component: {fileID: 1902361859}
   - component: {fileID: 1902361858}
   - component: {fileID: 1902361861}
-  - component: {fileID: 1902361862}
   - component: {fileID: 1902361864}
+  - component: {fileID: 1902361862}
   m_Layer: 0
   m_Name: Sphere2
   m_TagString: Untagged
@@ -2118,11 +2107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902361856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3599765d38b494281a1b91c8bc8dcb, type: 3}
+  m_Script: {fileID: 11500000, guid: c9853b15ad168e144a552d941977ebb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactableType: 2
-  ImpactableTypes: 0400000006000000
+  ObjectImpactType: 2
+  ImpactAllowedTypes: 0400000006000000
 --- !u!54 &1902361864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2184,7 +2173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserDistance: 5000
-  _laserEnabled: 1
+  _laserEnabled: 0
 --- !u!120 &1968382251
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2418,7 +2407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5691261974593092081, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.7
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5691261974593092081, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2459,7 +2448,7 @@ PrefabInstance:
     - target: {fileID: 9133059851393468027, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}
       propertyPath: TestImpactObject
       value: 
-      objectReference: {fileID: 770928558}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}
 --- !u!1001 &7721860389684500361

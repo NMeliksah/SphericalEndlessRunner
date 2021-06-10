@@ -1,14 +1,15 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public abstract class Impactable : MonoBehaviour
 {
     public EImpactableType ObjectImpactType;
     public List<EImpactableType> ImpactAllowedTypes;
 
-    protected abstract void Impact(EImpactableType otherObjectImpactType);
+    protected abstract void Impact(Impactable impactedObject);
 
     private void OnCollisionEnter(Collision other)
     {
@@ -20,7 +21,11 @@ public abstract class Impactable : MonoBehaviour
                           " but it is not of type Impactable.");
                 return;
             }
-            Impact(otherImpactObject.ObjectImpactType);
+
+            if (ImpactAllowedTypes.Contains(otherImpactObject.ObjectImpactType))
+            {
+                Impact(otherImpactObject);
+            }
         }
         catch (Exception exception)
         {

@@ -1,28 +1,47 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(RadialLayoutGroup))]
-public abstract class Powerup : MonoBehaviour
+public abstract class Powerup : Impactable
 {
     public float PowerupDuration;
     protected abstract void OnPowerupEnable();
     protected abstract void OnPowerupDisable();
 
-    public void OnImpact(EImpactableType sender, EImpactableType other)
+    private IEnumerator PowerupEnable()
     {
-        OnImpactRoutine(sender, other);
+        OnPowerupEnable();
+        yield return null;
     }
 
-    private IEnumerator OnImpactRoutine(EImpactableType sender, EImpactableType other)
+    private IEnumerator PowerupDisable()
     {
-        if(sender == EImpactableType.Powerup && 
-           (other == EImpactableType.Sphere1 || 
-            other == EImpactableType.Sphere2 ||
-            other == EImpactableType.Sphere3))
+        OnPowerupDisable();
+        yield return null;
+    }
+
+    private IEnumerator PowerupRoutine()
+    {
+           yield return PowerupEnable();
+           yield return new WaitForSeconds(PowerupDuration);
+           yield return PowerupDisable();
+    }
+
+    protected override void Impact(Impactable impactedObject)
+    {
+        switch (impactedObject.ObjectImpactType)
         {
-            OnPowerupEnable();
-            yield return new WaitForSeconds(PowerupDuration);
-            OnPowerupDisable();
+            case EImpactableType.Sphere1:
+                StartCoroutine("PowerupRoutine");
+                break;
+            case EImpactableType.Sphere2:
+                StartCoroutine("PowerupRoutine");
+                break;
+            case EImpactableType.Sphere3:
+                StartCoroutine("PowerupRoutine");
+                break;
         }
     }
 }

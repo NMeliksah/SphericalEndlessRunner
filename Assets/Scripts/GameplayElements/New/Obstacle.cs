@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(RadialLayoutGroup))]
-public abstract class Obstacle : MonoBehaviour
+public abstract class Obstacle : Impactable
 {
     private RadialLayoutGroup RadialLayoutGroup => this.GetComponent<RadialLayoutGroup>();
     
