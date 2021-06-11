@@ -7,7 +7,6 @@ using UnityEngine;
 public abstract class Impactable : MonoBehaviour
 {
     public EImpactableType ObjectImpactType;
-    public List<EImpactableType> ImpactAllowedTypes;
 
     protected abstract void Impact(Impactable impactedObject);
 
@@ -22,7 +21,8 @@ public abstract class Impactable : MonoBehaviour
                 return;
             }
 
-            if (ImpactAllowedTypes.Contains(otherImpactObject.ObjectImpactType))
+            //if (ImpactAllowedTypes.Contains(otherImpactObject.ObjectImpactType))
+            if(ImpactRuleManager.Instance.ImpactRuleDict[ObjectImpactType].Contains(otherImpactObject.ObjectImpactType))
             {
                 Impact(otherImpactObject);
             }
