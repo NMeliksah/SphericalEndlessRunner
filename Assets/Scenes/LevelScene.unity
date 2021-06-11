@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectImpactType: 8
-  ImpactAllowedTypes: 090000000a000000
+  ImpactAllowedTypes: 090000000b000000
 --- !u!54 &298560899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1029,6 +1029,64 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!1 &527796138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527796140}
+  - component: {fileID: 527796139}
+  m_Layer: 0
+  m_Name: ImpactRuleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &527796139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527796138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d647c821dc9ca44bc512c16d73da42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RulesList:
+  - KeyType: 6
+    ImpactableTypes: 090000000b000000
+  - KeyType: 7
+    ImpactableTypes: 090000000b000000
+  - KeyType: 8
+    ImpactableTypes: 090000000b000000
+  - KeyType: 9
+    ImpactableTypes: 0600000007000000080000000c000000
+  - KeyType: 10
+    ImpactableTypes: 0c000000
+  - KeyType: 11
+    ImpactableTypes: 0600000007000000080000000c000000
+  - KeyType: 12
+    ImpactableTypes: 090000000a0000000b000000
+--- !u!4 &527796140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527796138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689635030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,7 +2197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectImpactType: 7
-  ImpactAllowedTypes: 090000000a000000
+  ImpactAllowedTypes: 090000000b000000
 --- !u!54 &1902361864
 Rigidbody:
   m_ObjectHideFlags: 0
