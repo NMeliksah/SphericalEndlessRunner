@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ImpactPowerup : ImpactAction
 {
-    public override void Execute(EImpactableType sender, Impactable impactedObject)
+    public override void Execute(Impactable sender, Impactable impactedObject)
     {
     }
 }

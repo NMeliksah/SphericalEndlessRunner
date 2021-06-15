@@ -10,11 +10,11 @@ public class ImpactManager : Singleton<ImpactManager>
 
     private List<ImpactAction> _impactActions;
 
-    public void ExecuteAction(EImpactableType sender, Impactable impactedObject)
+    public void ExecuteAction(Impactable sender, Impactable impactedObject)
     {
         foreach (var action in _impactActions)
         {
-            if(action.KeyType == sender)
+            if(action.KeyType == sender.ObjectImpactType)
                 action.Execute(sender, impactedObject);
         }
     }

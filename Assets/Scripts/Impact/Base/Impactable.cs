@@ -25,7 +25,7 @@ public class Impactable : MonoBehaviour
             
             if(ImpactManager.Instance.ImpactRules[ObjectImpactType].Contains(otherImpactObject.ObjectImpactType))
             {
-                ImpactManager.Instance.ExecuteAction(ObjectImpactType, otherImpactObject);
+                ImpactManager.Instance.ExecuteAction(this, otherImpactObject);
             }
         }
         catch (Exception exception)

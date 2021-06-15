@@ -7,5 +7,5 @@ public abstract class ImpactAction : MonoBehaviour
 {
     public EImpactableType KeyType;
     public List<EImpactableType> ImpactableTypes;
-    public abstract void Execute(EImpactableType sender, Impactable impactedObject);
+    public abstract void Execute(Impactable sender, Impactable impactedObject);
 }
