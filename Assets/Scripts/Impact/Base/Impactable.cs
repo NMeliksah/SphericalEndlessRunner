@@ -1,14 +1,10 @@
 using System;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public abstract class Impactable : MonoBehaviour
+public class Impactable : MonoBehaviour
 {
     public EImpactableType ObjectImpactType;
-
-    protected abstract void Impact(Impactable impactedObject);
 
     private void OnCollisionEnter(Collision other)
     {
@@ -21,15 +17,20 @@ public abstract class Impactable : MonoBehaviour
                 return;
             }
 
-            //if (ImpactAllowedTypes.Contains(otherImpactObject.ObjectImpactType))
-            if(ImpactRuleManager.Instance.ImpactRuleDict[ObjectImpactType].Contains(otherImpactObject.ObjectImpactType))
+            if (!ImpactManager.Instance)
             {
-                Impact(otherImpactObject);
+                Debug.Log("Impact Rule Manager does not exist in the scene.");
+                return;
+            }
+            
+            if(ImpactManager.Instance.ImpactRules[ObjectImpactType].Contains(otherImpactObject.ObjectImpactType))
+            {
+                ImpactManager.Instance.ExecuteAction(ObjectImpactType, otherImpactObject);
             }
         }
         catch (Exception exception)
         {
-            Debug.Log("Collided with " + other.gameObject + " without Impactable. Exception: " + exception);
+            Debug.Log("The object : " + ObjectImpactType + " collided with " + other.gameObject + " but ImpactAction did not trigger. Exception: " + exception);
             return;
         }
     }

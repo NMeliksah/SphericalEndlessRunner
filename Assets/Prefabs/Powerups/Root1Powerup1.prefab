@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4846870915530833766}
   - component: {fileID: 4959366830858332532}
   - component: {fileID: 7418228329132250366}
+  - component: {fileID: 4954443992170409516}
   m_Layer: 0
   m_Name: Root1Powerup1
   m_TagString: Untagged
@@ -201,6 +202,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1b498db6e63cd4998626ff2abdaf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectImpactType: 11
-  ImpactAllowedTypes: 0600000007000000080000000c000000
+  _type: 301
   _powerupType: 1
+--- !u!114 &4954443992170409516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279272036650538280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b534c94ee96d664f9092ca7db132d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectImpactType: 11

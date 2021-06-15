@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : Impactable
+public class Tile : PooledObject
 {
-    protected override void Impact(Impactable impactedObject)
-    {
-        
-    }
 }

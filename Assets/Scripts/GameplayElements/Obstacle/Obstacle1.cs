@@ -17,20 +17,22 @@ public class Obstacle1 : Obstacle
             InitialPositionAngle = Random.Range(0f, 360.0f);
         }
         SetRadialPosition(InitialPositionAngle);
+        
     }
-
-    protected override void Impact(Impactable impactedObject)
+    
+    
+    protected void OnImpact(Impactable sender, Impactable impacted)
     {
-        switch (impactedObject.ObjectImpactType)
+        switch (impacted.ObjectImpactType)
         {
             case EImpactableType.Sphere1:
-                Debug.Log("Obstacle 1 impacted with: " + impactedObject.gameObject);
+                Debug.Log("Obstacle 1 impacted with: " + impacted.gameObject);
                 break;
             case EImpactableType.Sphere2:
-                Debug.Log("Obstacle 1 impacted with: " + impactedObject.gameObject);
+                Debug.Log("Obstacle 1 impacted with: " + impacted.gameObject);
                 break;
             case EImpactableType.Sphere3:
-                Debug.Log("Obstacle 1 impacted with: " + impactedObject.gameObject);
+                Debug.Log("Obstacle 1 impacted with: " + impacted.gameObject);
                 break;
         }
     }

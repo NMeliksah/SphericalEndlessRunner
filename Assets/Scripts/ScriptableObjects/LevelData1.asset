@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Tutorial
   MoveSpeed: 4
-  Tiles: []
-  Obstacles: []
-  Powerups: []
+  Tiles:
+  - {fileID: 6769240984003696242, guid: 9c7be97c105e3244e946ccbe364baac4, type: 3}
+  - {fileID: 955980662865384249, guid: 45dd30030950cba4aac03cfa66382dd4, type: 3}
+  Obstacles:
+  - {fileID: 7770585851594858107, guid: e0cf1546377e95b47ab730d02483ac10, type: 3}
+  - {fileID: 2114854747616329668, guid: 17b8def5267fb9646857a47e8a425613, type: 3}
+  Powerups:
+  - {fileID: 8279272036650538280, guid: 6a6a831f2f4cb33428960fa9e16bd196, type: 3}

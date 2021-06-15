@@ -1,12 +1,20 @@
 using UnityEngine;
 
 [RequireComponent(typeof(RadialLayoutGroup))]
-public abstract class Obstacle : Impactable
+[RequireComponent(typeof(Impactable))]
+public abstract class Obstacle : PooledObject
 {
-    private RadialLayoutGroup RadialLayoutGroup => this.GetComponent<RadialLayoutGroup>();
+    private RadialLayoutGroup _radialLayoutGroup => this.GetComponent<RadialLayoutGroup>();
+    private Impactable _impactable => this.GetComponent<Impactable>();
     
     protected void SetRadialPosition(float angle)
     {
-        RadialLayoutGroup.StartAngle = angle % 360.0f;
+        _radialLayoutGroup.StartAngle = angle % 360.0f;
     }
+
+    public override void OnObjectSpawn()
+    {
+        // Set position, rotation
+    }
+
 }
