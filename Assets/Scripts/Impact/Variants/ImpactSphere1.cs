@@ -6,15 +6,16 @@ public class ImpactSphere1 : ImpactAction
     { 
         Debug.Log("Sphere 1 impacted. Sender: " + sender + " Impacted: " +impactedObject);
 
-        CheckPowerups(impactedObject);
+        CheckPowerups(sender, impactedObject);
     }
 
-    private static void CheckPowerups(Impactable impactedObject)
+    private static void CheckPowerups(Impactable sender,Impactable impactedObject)
     {
         if (impactedObject.ObjectImpactType == EImpactableType.Powerup)
         {
+            PlayerCharacter player = GameMaster.Instance.Player;
             EPowerupType powerupType = impactedObject.gameObject.GetComponent<PowerupObject>().PowerupType;
-            PlayerCharacter.Instance.ActivatePowerup(powerupType);
+            GameMaster.Instance.ActivatePlayerPowerup(player, powerupType);
         }
     }
 }

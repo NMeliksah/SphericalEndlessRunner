@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : Singleton<PlayerCharacter>
+public class PlayerCharacter : MonoBehaviour
 {
     private Dictionary<EPowerupType, Powerup> _powerups = new Dictionary<EPowerupType, Powerup>();
     
