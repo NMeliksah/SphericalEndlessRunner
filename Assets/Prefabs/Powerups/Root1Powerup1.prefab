@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 301
-  _powerupType: 1
+  PowerupType: 1
 --- !u!114 &4954443992170409516
 MonoBehaviour:
   m_ObjectHideFlags: 0
