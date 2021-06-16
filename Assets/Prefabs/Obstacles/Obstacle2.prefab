@@ -199,10 +199,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2398157601336873757}
-  - component: {fileID: 6123208302643332999}
+  - component: {fileID: 6437133797499976409}
   - component: {fileID: 3242328225266423178}
   - component: {fileID: 2114854747616329691}
-  - component: {fileID: 6437133797499976409}
   m_Layer: 0
   m_Name: Obstacle2
   m_TagString: Untagged
@@ -227,19 +226,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6123208302643332999
-MonoBehaviour:
+--- !u!54 &6437133797499976409
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114854747616329668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa97c662e46ab74f95e7ca3fa8c61ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _type: 202
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &3242328225266423178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,29 +267,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2114854747616329668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e5af588a8a21643808c7c70dadfec8, type: 3}
+  m_Script: {fileID: 11500000, guid: e8e8563c63c59764597e45f9d9022d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 202
-  OverrideStartPosition: 1
-  SetRandomPosition: 0
+  OverrideStartPosition: 0
+  SetRandomPosition: 1
   InitialPositionAngle: 0
---- !u!54 &6437133797499976409
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114854747616329668}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6641459590680697384
 GameObject:
   m_ObjectHideFlags: 0

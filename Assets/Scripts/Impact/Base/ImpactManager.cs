@@ -22,12 +22,6 @@ public class ImpactManager : Singleton<ImpactManager>
     private void Start()
     {
         InitializeImpactActions();
-        
-        // Debug foreach. Can be removed after it's working for sure.
-        foreach (var dictItem in ImpactRules)
-        {
-            Debug.Log("Dictionary key: " + dictItem.Key + " value: " + dictItem.Value);
-        }
     }
 
     private void InitializeImpactActions()
