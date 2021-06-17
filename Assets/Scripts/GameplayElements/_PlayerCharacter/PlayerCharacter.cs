@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
+    public List<EPowerupType> AvailablePowerups = new List<EPowerupType>();
     private Dictionary<EPowerupType, Powerup> _powerups = new Dictionary<EPowerupType, Powerup>();
     
     public void ActivatePowerup(EPowerupType powerupType)
     {
+        if (!AvailablePowerups.Contains(powerupType)) return;
         _powerups[powerupType].Activate();
     }
     
